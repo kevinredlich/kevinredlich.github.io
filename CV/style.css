@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: 'Cairo', sans-serif;
+}
+
+::selection {
+  background-color: #ffc907;
+  color: #0f172a;
+}
+
+.cv_container .interest,
+.cv_container .experience,
+.cv_container .skills,
+.cv_container .cont_edu_info,
+.cv_container .profile {
+  padding: 40px;
+  background-color: #f5f3f4;
+  color: #0f172a;
+  border-radius: 15px;
+}
+
+.cv_container {
+  width: 80%;
+  padding: 50px;
+  display: grid;
+  grid-template: auto/repeat(12, 1fr);
+  grid-gap: 30px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .cv_container {
+    width: 100%;
+    padding: 30px;
+    grid-gap: 30px 0;
+  }
+}
+.cv_container h1 {
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: -5px;
+}
+.cv_container h1 span {
+  font-weight: 900;
+}
+.cv_container h2 {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.cv_container h2.tittle {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cv_container p {
+  color: #7c879c;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.cv_container ul {
+  list-style: none;
+}
+.cv_container ul li {
+  color: #7c879c;
+}
+.cv_container .profile {
+  grid-row: span 1;
+  grid-column: span 12;
+  display: flex;
+}
+.cv_container .profile .profile_img {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  margin: 0 80px 0 30px;
+  border-radius: 50%;
+  border: 3px solid #898382;
+}
+.cv_container .profile .profile_img img {
+  width: 134px;
+  height: 134px;
+  background-size: cover;
+  border-radius: 50%;
+}
+.cv_container .profile .profile_info {
+  padding-right: 200px;
+}
+@media (max-width: 900px) {
+  .cv_container .profile {
+    display: block;
+    text-align: center;
+  }
+  .cv_container .profile .profile_img {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .cv_container .profile .profile_info {
+    padding-right: 0px;
+  }
+}
+.cv_container .cont_edu_info {
+  grid-row: span 2;
+  grid-column: span 4;
+}
+.cv_container .cont_edu_info > div:not(:last-child) {
+  margin-bottom: 30px;
+}
+.cv_container .cont_edu_info .contact .contact_list li span {
+  margin-left: 15px;
+}
+.cv_container .cont_edu_info .contact .contact_list li svg {
+  width: 30px;
+  height: 30px;
+  padding-top: 8px;
+  color: #ffc907;
+}
+.cv_container .cont_edu_info .contact .contact_list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.cv_container .cont_edu_info .education > div:last-child {
+  margin-top: 20px;
+}
+.cv_container .cont_edu_info .education .education_list > p:not(:last-child) {
+  margin-bottom: 5px;
+}
+.cv_container .cont_edu_info .education .education_list .education_year {
+  font-weight: 600;
+}
+.cv_container .cont_edu_info .education .education_list .education_degree {
+  font-weight: 400;
+}
+.cv_container .cont_edu_info .education .education_list .education_college {
+  font-weight: 400;
+}
+@media (max-width: 900px) {
+  .cv_container .cont_edu_info {
+    grid-row: span 1;
+    grid-column: span 12;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 678px) {
+  .cv_container .cont_edu_info {
+    grid-row: span 1;
+    grid-column: span 12;
+    display: block;
+  }
+}
+.cv_container .skills {
+  grid-row: span 1;
+  grid-column: span 8;
+}
+.cv_container .skills h2 {
+  margin-bottom: 20px;
+}
+.cv_container .skills .progress_bar li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cv_container .skills .progress_bar li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.cv_container .skills .progress_bar li span {
+  width: 80%;
+  height: 10px;
+  background: #a9a9a9;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.cv_container .skills .progress_bar li span::after {
+  position: absolute;
+  content: '';
+  height: 10px;
+  background-color: #0284ff;
+  border-radius: 10px;
+}
+.cv_container .skills .progress_bar li:first-child span::after {
+  width: 80%;
+}
+.cv_container .skills .progress_bar li:nth-child(2) span::after {
+  width: 75%;
+}
+.cv_container .skills .progress_bar li:nth-child(3) span::after {
+  width: 85%;
+}
+.cv_container .skills .progress_bar li:last-child span::after {
+  width: 65%;
+}
+@media (max-width: 900px) {
+  .cv_container .skills {
+    grid-row: span 1;
+    grid-column: span 12;
+  }
+  .cv_container .skills .progress_bar li span {
+    width: 60%;
+  }
+}
+.cv_container .experience {
+  grid-row: span 2;
+  grid-column: span 8;
+}
+.cv_container .experience .experience_content {
+  padding-left: 40px;
+  position: relative;
+}
+.cv_container .experience .experience_content::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #a9a9a9;
+}
+.cv_container
+  .experience
+  .experience_content
+  .experience_list:not(:last-child) {
+  margin-bottom: 30px;
+}
+.cv_container .experience .experience_content .experience_list .experience_job {
+  color: #0284ff;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.cv_container
+  .experience
+  .experience_content
+  .experience_list
+  .experience_job::before {
+  position: absolute;
+  content: '';
+  left: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #0284ff;
+  margin-top: 5px;
+}
+.cv_container
+  .experience
+  .experience_content
+  .experience_list
+  .experience_location {
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  .cv_container .experience {
+    grid-row: span 2;
+    grid-column: span 12;
+  }
+}
+.cv_container .interest {
+  grid-row: span 1;
+  grid-column: span 4;
+  background-color: #0285ffab;
+}
+.cv_container .interest h2 {
+  color: #0f172a;
+}
+.cv_container .interest .interest_list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.cv_container .interest .interest_list li {
+  color: #0f172a;
+}
+.cv_container .interest .interest_list li span {
+  display: block;
+}
+.cv_container .interest .interest_list li svg {
+  width: 40px;
+  height: 40px;
+  padding-top: 8px;
+}
+.cv_container .interest .interest_list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+@media (max-width: 900px) {
+  .cv_container .interest {
+    grid-row: span 1;
+    grid-column: span 12;
+  }
+}
