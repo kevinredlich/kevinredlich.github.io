@@ -119,7 +119,7 @@ body {
   width: 30px;
   height: 30px;
   padding-top: 8px;
-  color: #ffc907;
+  color: #a9a9a9;
 }
 .cv_container .cont_edu_info .contact .contact_list li:not(:last-child) {
   margin-bottom: 5px;
